@@ -1,4 +1,5 @@
-from pyscript import display, document
+from pyscript import display
+from js import document
 
 def intrams_checker(e):
     document.getElementById('output').innerHTML = ''
@@ -18,23 +19,18 @@ def intrams_checker(e):
 
     if registration != 'registered':
         display(
-            "Not eligible: student is not registered for Intrams. Ask your PE teacher regarding online registration.",
+            "u not registered🤨",
             target='output'
         )
     elif clearance != 'cleared':
         display(
-            "Not eligible: medical clearance required. Please go to the clinic.",
-            target='output'
-        )
-    elif grade_level < 7 or grade_level > 10:
-        display(
-            "Not eligible: only students from Grades 7 to 10 may join Intramurals.",
+            "u fragile😛",
             target='output'
         )
     else:
-        display(f"Congratulations! You are eligible to join Intramurals 🎉", target='output')
+        display(f"Enjoy Intrams!", target='output')
 
-        if grade == '7':
+        if grade_level == 7:
             if section == 'ruby':
                 document.getElementById("image").innerHTML = (
                     "<img src='yellow tigers.jpg' width='150' alt='Yellow Tigers'>"
@@ -44,27 +40,29 @@ def intrams_checker(e):
                     "<img src='green hornets.png' width='150' alt='Green Hornets'>"
                 )
         
-        if grade == '8':
+        if grade_level == 8:
             if section == 'ruby':
                 document.getElementById("image").innerHTML = (
                     "<img src='blue bears.jpg' width='150' alt='Blue Bears'>"
                 )
             elif section == 'emerald':
+                # ↓ Corrected malformed src attribute (removed stray period and extra quote)
                 document.getElementById("image").innerHTML = (
-                    "<img src='red bulldogs'.png' width='150' alt='Red Bulldogs'>"
+                    "<img src='red bulldogs.png' width='150' alt='Red Bulldogs'>"
                 )
 
-        if grade == '9':
+        if grade_level == 9:
             if section == 'ruby':
                 document.getElementById("image").innerHTML = (
                     "<img src='blue bears.jpg' width='150' alt='Blue Bears'>"
                 )
             elif section == 'emerald':
+                # ↓ Same src correction as above
                 document.getElementById("image").innerHTML = (
-                    "<img src='red bulldogs'.png' width='150' alt='Red Bulldogs'>"
+                    "<img src='red bulldogs.png' width='150' alt='Red Bulldogs'>"
                 )
 
-        if grade == '10':
+        if grade_level == 10:
             if section == 'ruby':
                 document.getElementById("image").innerHTML = (
                     "<img src='yellow tigers.jpg' width='150' alt='Yellow Tigers'>"
