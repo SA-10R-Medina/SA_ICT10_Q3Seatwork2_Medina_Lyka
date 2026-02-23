@@ -34,11 +34,42 @@ def intrams_checker(e):
     else:
         display(f"Congratulations! You are eligible to join Intramurals 🎉", target='output')
 
-        if section == 'emerald':
-            document.getElementById("image").innerHTML = "<img src='emerald.png' width='150'>"
-        elif section == 'ruby':
-            document.getElementById("image").innerHTML = "<img src='ruby.png' width='150'>"
-        elif section == 'sapphire':
-            document.getElementById("image").innerHTML = "<img src='sapphire.png' width='150'>"
-        else:
-            document.getElementById("image").innerHTML = "<img src='topaz.png' width='150'>"
+        if grade == '7':
+            if section == 'ruby':
+                document.getElementById("image").innerHTML = (
+                    "<img src='yellow tigers.jpg' width='150' alt='Yellow Tigers'>"
+                )
+            elif section == 'emerald':
+                document.getElementById("image").innerHTML = (
+                    "<img src='green hornets.png' width='150' alt='Green Hornets'>"
+                )
+        
+        if grade == '8':
+            if section == 'ruby':
+                document.getElementById("image").innerHTML = (
+                    "<img src='blue bears.jpg' width='150' alt='Blue Bears'>"
+                )
+            elif section == 'emerald':
+                document.getElementById("image").innerHTML = (
+                    "<img src='red bulldogs'.png' width='150' alt='Red Bulldogs'>"
+                )
+
+        if grade == '9':
+            if section == 'ruby':
+                document.getElementById("image").innerHTML = (
+                    "<img src='blue bears.jpg' width='150' alt='Blue Bears'>"
+                )
+            elif section == 'emerald':
+                document.getElementById("image").innerHTML = (
+                    "<img src='red bulldogs'.png' width='150' alt='Red Bulldogs'>"
+                )
+
+        if grade == '10':
+            if section == 'ruby':
+                document.getElementById("image").innerHTML = (
+                    "<img src='yellow tigers.jpg' width='150' alt='Yellow Tigers'>"
+                )
+            elif section == 'emerald':
+                document.getElementById("image").innerHTML = (
+                    "<img src='green hornets.png' width='150' alt='Green Hornets'>"
+                )
